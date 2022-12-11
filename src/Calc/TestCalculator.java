@@ -11,35 +11,35 @@ class TestCalculator {
 
     @Test
     public void Should_add_two_numbers_and_return_result() {
-        int excpectedResult = 2 + 3;
+        int expectedResult = 2 + 3;
         int actualResult = calculator.add(2,3);
 
-        Assert.assertEquals(excpectedResult, actualResult);
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
     public void Should_substract_two_numbers_and_return_result() {
-        int excpectedResult = 4 - 3;
+        int expectedResult = 4 - 3;
         int actualResult = calculator.sub(4,3);
 
-        Assert.assertEquals(excpectedResult, actualResult);
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
     public void Should_multiply_two_numbers_and_return_result() {
-        int excpectedResult = 3 * 3;
+        int expectedResult = 3 * 3;
         int actualResult = calculator.multiply(3,3);
 
-        Assert.assertEquals(excpectedResult, actualResult);
+        Assert.assertEquals(expectedResult, actualResult);
         // Implement
     }
 
     @Test
     public void Should_divide_two_numbers_and_return_result() {
-        float excpectedResult = 9 / 3;
+        float expectedResult = 9 / 3;
         float actualResult = calculator.divide(9,3);
 
-        Assertions.assertEquals(excpectedResult, actualResult);
+        Assertions.assertEquals(expectedResult, actualResult);
 
     }
 
@@ -48,7 +48,7 @@ class TestCalculator {
         ArithmeticException thrown = Assertions
                 .assertThrows(ArithmeticException.class, () -> {
                     calculator.divide(1, 0);
-                }, "ZeroDivisionError");
+                });
         Assertions.assertEquals("ZeroDivisionError", thrown.getMessage());
     }
 }
